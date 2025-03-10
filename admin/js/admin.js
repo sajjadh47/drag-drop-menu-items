@@ -1,12 +1,12 @@
 jQuery( document ).ready( function( $ )
 {
-	var DNDMI =
+	var DNDMI 								=
 	{
-		draggedElement : null,
+		draggedElement 			: null,
 		
-		fakeDropPlaceholder : '<li class="menu-item-depth-0 sortable-placeholder fake-placeholder-for-drop" style="text-align: center;line-height: 35px;">'+dndmi.fakeDropPlaceholder+'</li>',
+		fakeDropPlaceholder 	: '<li class="menu-item-depth-0 sortable-placeholder fake-placeholder-for-drop" style="text-align: center;line-height: 35px;">'+ DRAG_DROP_MENU_ITEMS.fakeDropPlaceholder +'</li>',
 
-		fakeAddingElSimulator : '<li class="menu-item" id="_menu_item_$$id$$"><div class="menu-item-bar"><div class="menu-item-handle"><span class="item-title"><span class="menu-item-title" style="cursor: move;">$$title$$</span></span><span class="item-controls" style="top: 8px;right: 0;"><span class="spinner" style="visibility: visible;"></span></span></div></div></li>',
+		fakeAddingElSimulator 	: '<li class="menu-item" id="_menu_item_$$id$$"><div class="menu-item-bar"><div class="menu-item-handle"><span class="item-title"><span class="menu-item-title" style="cursor: move;">$$title$$</span></span><span class="item-controls" style="top: 8px;right: 0;"><span class="spinner" style="visibility: visible;"></span></span></div></div></li>',
 
 		init : function()
 		{
@@ -28,14 +28,14 @@ jQuery( document ).ready( function( $ )
 			$( '#menu-to-edit' ).append( DNDMI.fakeDropPlaceholder );
 
 			$( 'li.menu-item' ).each( function( index, el )
-			{	
+			{
 				if ( $( el ).hasClass( 'menu-item-depth-0' ) )
 				{
 					$( el ).before( DNDMI.fakeDropPlaceholder );
 				}
 			} );
 
-			DNDMI.draggedElement = e.srcElement || e.target;
+			DNDMI.draggedElement 			= e.srcElement || e.target;
 		},
 
 		removeFakeDropArea : function()
@@ -43,7 +43,7 @@ jQuery( document ).ready( function( $ )
 			// remove all fake drop area placeholders
 			$( '.fake-placeholder-for-drop' ).remove();
 
-			DNDMI.draggedElement = null;
+			DNDMI.draggedElement 			= null;
 		},
 
 		createMenuItem : function( e )
@@ -54,7 +54,7 @@ jQuery( document ).ready( function( $ )
 			}
 
 			// setup initial params
-			var $AjaxParams =
+			var $AjaxParams 				=
 			{
 				'action': 'add-menu-item',
 				'menu': $( '#menu' ).val(),
@@ -63,32 +63,32 @@ jQuery( document ).ready( function( $ )
 
 			if ( $( DNDMI.draggedElement ) )
 			{
-				var $targetEl = DNDMI.draggedElement;
+				var $targetEl 				= DNDMI.draggedElement;
 
-				var $targetInput = $( $targetEl ).find( 'input' );
+				var $targetInput 			= $( $targetEl ).find( 'input' );
 
-				var $title = $( $targetEl ).text();
+				var $title 					= $( $targetEl ).text();
 
-				var $id = _.random( 1, Number.MAX_SAFE_INTEGER );
+				var $id 					= _.random( 1, Number.MAX_SAFE_INTEGER );
 
-				var $parent = $( $targetEl ).closest('li');
+				var $parent 				= $( $targetEl ).closest('li');
 
 				if ( $( $targetEl ).hasClass( 'customlinkdiv' ) )
-				{	
-					$title = $( $targetEl ).find( '#custom-menu-item-name' ).val();
+				{
+					$title 					= $( $targetEl ).find( '#custom-menu-item-name' ).val();
 
-					$parent = $( $targetEl ).closest('div#customlinkdiv');
+					$parent 				= $( $targetEl ).closest('div#customlinkdiv');
 				}
 
 				$( this ).after( DNDMI.fakeAddingElSimulator.replace( '$$title$$', $title ).replace( '$$id$$', $id ) );
 
 				// get all menu item inputs
-				var inputs = $( $parent ).find( ':input' );
+				var inputs 					= $( $parent ).find( ':input' );
 
 				// now add all other hidden fields of the menu item
 				$( inputs ).each( function( index, el )
-				{    
-					$AjaxParams[el.name] = $( el ).val();
+				{
+					$AjaxParams[el.name] 	= $( el ).val();
 				} );
 
 				DNDMI.callAjax( $AjaxParams , $id );
@@ -101,8 +101,8 @@ jQuery( document ).ready( function( $ )
 		{
 			// request it to wp backend
 			$.post( ajaxurl, $params, function( menuMarkup )
-			{	
-				menuMarkup = $.trim( menuMarkup ); // Trim leading whitespaces.
+			{
+				menuMarkup 					= $.trim( menuMarkup ); // Trim leading whitespaces.
 
 				$( '#_menu_item_' + id ).replaceWith( menuMarkup );
 			} );
@@ -111,7 +111,7 @@ jQuery( document ).ready( function( $ )
 
 	// if drag & drop supported for that particular browser
 	if( 'draggable' in document.createElement( 'span' ) )
-	{	
+	{
 		DNDMI.init();
 	}
 } );
