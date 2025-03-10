@@ -9,8 +9,3 @@
 
 // If uninstall not called from WordPress, then exit.
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) die;
-
-/**
- * Remove plugin options on uninstall/delete
- */
-delete_option( 'plugin_settings_name' );
