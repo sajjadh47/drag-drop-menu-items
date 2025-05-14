@@ -1,13 +1,8 @@
 # Drag & Drop Menu Items
 
 **Tags:** drag-and-drop, wp-nav-menus, nav-menu-items, nav-menu-items-edit, add-menu-items \
-**Contributors:** sajjad67 \
-**Requires at least:** 5.6 \
-**Tested up to:** 6.7 \
-**Stable tag:** 2.0.0 \
+**Tested up to:** 6.8 \
 **Requires PHP:** 8.0 \
-**License:** GPLv2 \
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 
 Add WP Menu Items By Dragging It & Dropping into Menu Items List Area.
 
@@ -21,9 +16,6 @@ Easily Add Nav Menu Item By Dragging It To Menu Lists Container.
 - Droppable Area is Highlighted For Avoid Confusion
 - Drop Menu Items Right into Menu List (Right Side)
 
-**Interested in contributing to Drag & Drop Menu Items?**
-Contact me at sagorh672(at)gmail.com
-
 ## Installation
 
 To add a WordPress Plugin using the built-in plugin installer:
@@ -36,8 +28,8 @@ Go to Plugins > Add New.
 4. The resulting installation screen will list the installation as successful or note any problems during the install.
 If successful, click Activate Plugin to activate it, or Return to Plugin Installer for further actions.
 
-To add a WordPress Plugin from github repo / plugin zip file :
-1. Go to wordpress plugin page
+To add a WordPress Plugin from GitHub repo / plugin zip file :
+1. Go to WordPress plugin page
 2. Click Add New & Upload Plugin
 3. Drag / Click upload the plugin zip file
 4. The resulting installation screen will list the installation as successful or note any problems during the install.
@@ -64,6 +56,9 @@ Just after installing Drag & Drop Menu Items plugin, Go to Appearance -> Menus. 
 ![Process of how to add menu items by dragging](https://ps.w.org/drag-drop-menu-items/assets/screenshot-3.gif)
 
 ## Changelog
+
+### 2.0.1
+- Checked for latest wp version 6.8
 
 ### 2.0.0
 - Minor changes in codebase only.

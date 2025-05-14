@@ -4,7 +4,7 @@
  *
  * @since         2.0.0
  * @package       Drag_Drop_Menu_Items
- * @subpackage    Drag_Drop_Menu_Items/includes
+ * @subpackage    Drag_Drop_Menu_Items/admin/views
  * @author        Sajjad Hossain Sagor <sagorh672@gmail.com>
  */
 
