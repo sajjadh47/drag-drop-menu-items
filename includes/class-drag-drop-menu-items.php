@@ -73,10 +73,10 @@ class Drag_Drop_Menu_Items {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Drag_Drop_Menu_Items_Loader.  Orchestrates the hooks of the plugin.
-	 * - Drag_Drop_Menu_Items_i18n.    Defines internationalization functionality.
-	 * - Drag_Drop_Menu_Items_Admin.   Defines all hooks for the admin area.
-	 * - Drag_Drop_Menu_Items_Public.  Defines all hooks for the public side of the site.
+	 * - Drag_Drop_Menu_Items_Loader. Orchestrates the hooks of the plugin.
+	 * - Drag_Drop_Menu_Items_i18n.   Defines internationalization functionality.
+	 * - Drag_Drop_Menu_Items_Admin.  Defines all hooks for the admin area.
+	 * - Drag_Drop_Menu_Items_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
