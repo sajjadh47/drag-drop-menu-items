@@ -1,5 +1,7 @@
 # Drag & Drop Menu Items
 
+[![Plugin Banner](https://ps.w.org/drag-drop-menu-items/assets/banner-772x250.png)](https://wordpress.org/plugins/drag-drop-menu-items/)
+
 **Tags:** drag-and-drop, wp-nav-menus, nav-menu-items, nav-menu-items-edit, add-menu-items \
 **Tested up to:** 6.8 \
 **Requires PHP:** 8.0 \
