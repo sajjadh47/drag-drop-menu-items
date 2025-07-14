@@ -14,7 +14,7 @@
  * Plugin URI:        https://wordpress.org/plugins/drag-drop-menu-items/
  * Description:       Easily Add Nav Menu Item By Dragging It To Menu Lists Container.
  * Version:           2.0.1
- * Requires at least: 6.5
+ * Requires at least: 5.6
  * Requires PHP:      8.0
  * Author:            Sajjad Hossain Sagor
  * Author URI:        https://sajjadhsagor.com/
