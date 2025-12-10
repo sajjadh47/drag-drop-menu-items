@@ -2,8 +2,8 @@
 Tags: drag-and-drop, wp-nav-menus, nav-menu-items, nav-menu-items-edit, add-menu-items
 Contributors: sajjad67
 Requires at least: 5.6
-Tested up to: 6.8
-Stable tag: 2.0.1
+Tested up to: 6.9
+Stable tag: 2.0.2
 Requires PHP: 8.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -46,6 +46,8 @@ Just after installing Drag & Drop Menu Items plugin, Go to Appearance -> Menus. 
 3. Process of how to add menu items by dragging
 
 == Changelog ==
+= 2.0.2 =
+- Compatibility checkup for latest wp version 6.9
 = 2.0.1 =
 - Checked for latest wp version 6.8
 = 2.0.0 =
